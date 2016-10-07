@@ -1,0 +1,37 @@
+\newpage
+\section{Resumen de NEAT}
+
+El objetivo de esta sección es enseñar en las palabras mas sencillas lo básico necesario para aprender NEAT. \newline
+
+NEAT (NeuroEvolution of Augmenting Topologies) es un algoritmo \textbf{bio-inspirado} por el cuál se producen \textbf{redes neuronales artificiales} que dentro de todos los \textbf{parámetros internos} que optimiza está también la \textbf{topología} de la red neuronal (no se debe definir una topología dado que NEAT encuentra la mejor a través del mismo algoritmo). 
+
+Antes de continuar explicando NEAT ya se han tocado varios conceptos importantes que en general son ajenos a un usuario común, los cuales vamos a explicar con un poco de profundidad.
+
+\begin{enumerate}
+\item Redes neuronales \textbf{bio-inspiradas}: Las redes neuronales bio-inspiradas son aquellas que para obtener resultados realizan procesos inspirados en la naturaleza, por ejemplo en NEAT las redes neuronales artificiales son tratadas como organismos los cuales van optimizándose a través de procesos de cruzamientos entre dos organismos (se explicará a continuación).
+\item \textbf{Topología} de una red neuronal: La topología de una red neuronal es la forma en que se conectan las neuronas entre si, y la cantidad de neuronas y la posicion de ellas en la red neuronal.
+\item \textbf{parámetros internos}: Los parámetros internos de la red neuronal son todas las variables las cuales pueden ser modificadas con el algoritmo y que buscan optimizar los resultados obtenidos, por ejemplo el valor de los pesos synapticos que conectan las neuronas, las constantes de sigmoide de una neurona de tipo sigmoidal, entre otro tipo de parámetros posibles. 
+\end{enumerate}
+
+Ojo: Aquí se toma por entendido un dominio básico de redes neuronales, en caso de no entender qué es una red neuronal artificial, la topología, las capas de neuronas, las conexiones sinápticas u otros conceptos, lo mejor es buscar literatura de redes neuronales y leer los primeros capítulos dado que son conceptos básicos pero aún así requieren de un estudio previo mínimo.
+
+\subsection{¿Cómo funciona NEAT?}
+
+NEAT es un algoritmo bio-inspirado el cual busca imitar la evolución de los organismos vivos y replicar los mecanísmos de evolución en las redes neuronales artificiales, para esto NEAT construye el concepto de la vida, la vida se compone de especies, las especies se componen de razas y las razas se componen de organismos.\newline
+
+[Insertar imagen aqui]\newline
+
+
+\textbf{¿Cómo esto puede producir un motor de aprendizaje?}\newline
+
+
+Los organismos van adaptándose al medio a través de cruzamientos, en general los organismos más adaptados son quienes poseen más hijos (imaginemos por ejemplo el caso de los leones), es así como el cruzamiento de los organismos más adaptados produce nuevas generaciones de organismos los cuales por probabilidad son mejores (más adaptados, más optimos, o como queramos verlo) que sus padres. Por otra parte las razas compiten entre ellas e incluso pueden llevar a la extinción de otras razás, en general siempre prevalecen los organismos más adaptados y por lo tanto las razas más adaptadas prevalecen sobre las menos adaptadas, en fin lo mismo ocurre con las especies que componen la vida.\newline
+
+
+\textbf{¿Qué tiene que ver esto con redes neuronales?} \newline
+
+
+En NEAT se conecta la idea de la evolución con redes neuronales a través de una relación simple: los organismos contienen, y se componen esencialmente de, una red neuronal artificial. Como antes se explicó entre más adaptados están los organismos más probabilidades de que tengan hijos, cuando se dice que es más adaptado o menos adaptado un organismo en realidad es una evaluación de cuán bien funciona la red neuronal (a través de la asignación de una calificación, más adelante veremos en detalle este concepto) que contiene este organismo, y cuando dos organismos se cruzan para producir un hijo lo que hacen es mezclar sus redes neuronales y así producir una red neuronal en el hijo que contenga valores del padre y de la madre (más detalles del proceso de cruzamiento adelante). \newline
+
+
+\textbf{}\newline
